@@ -1,0 +1,19 @@
+@import './utils/var';
+@import './base/commons';
+@import './base/resets';
+@import './utils/hidden';
+@import './utils/placeholders';
+// @import './utils/animations';
+@import './utils/mixins';
+
+@import './components/header';
+@import './components/hero';
+@import './components/advantage';
+@import './components/about';
+@import './components/team';
+@import './components/company';
+@import './components/footer';
+// @import './components/backdrop';
+
+// @import './components/filters';
+// @import './components/project';

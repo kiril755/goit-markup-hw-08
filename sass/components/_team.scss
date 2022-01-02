@@ -1,0 +1,117 @@
+.team_bgc {
+    background-color: $third-bgc-color;
+  }
+
+.team__title {
+    margin-bottom: 30px;
+  
+    color: $main-title-color;
+    text-align: center;
+  
+    @include font(700, 28px, 1.18);
+
+    @media screen and (min-width: 1200px){
+        margin-bottom: 50px;
+        @include font(700, 36px, 1.17);
+    }
+}
+
+.team__list {
+    text-align: center;
+    // display: flex;
+    // flex-wrap: wrap;
+    
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+    }
+}
+
+.team__item {
+  @media screen and (max-width: 767px){
+   &:not(:last-child){
+    margin-bottom: 30px;
+   }
+  }
+
+  padding-bottom: 24px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  background-color: $main-bgc-color;
+
+  @media screen and (min-width: 768px){
+    margin: 15px;
+    width: calc((100% - 2 * 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px){
+    margin: 15px;
+    width: calc((100% - 4 * 30px) / 4);
+  }
+}
+
+.team__img {
+    width: 450px;
+    height: 460px;  
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 768px){
+        width: 354px;
+        height: 374px;
+    }
+
+    @media screen and (min-width: 1200px){
+        width: 270px;
+        height: 260px;
+    }
+}
+
+
+.employee_type {
+    margin-bottom: 10px;
+  
+    color: $main-title-color;
+    @include font(500, 16px, 1.19);
+}
+
+.employee__text {
+    margin-bottom: 16px;
+  
+    font-size: 16px;
+    line-height: 1.19;
+    @include font(400, 16px, 1.19);
+  
+}
+
+.social_position {
+  @include flex;
+}
+
+.social__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.social__link {
+  @include flex;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: $third-btn-color;
+  background-color: $main-bgc-color;
+
+  &:hover,
+  &:focus {
+    color: $second-btn-color;
+    background-color: $second-btn-bgc-color;
+  }
+}
+
+.social__icon {
+  fill: currentColor;
+}

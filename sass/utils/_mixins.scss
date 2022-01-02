@@ -1,0 +1,16 @@
+@mixin transition($it, $time: 250ms, $cb: cubic-bezier(0.4, 0, 0.2, 1)) {
+  transition: $it $time $cb;
+}
+
+@mixin font($fw, $fz, $lh, $ls: 0.03em) {
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+@mixin flex($f: flex, $al: center, $jy: center) {
+  display: $f;
+  align-items: $al;
+  justify-content: $jy;
+}

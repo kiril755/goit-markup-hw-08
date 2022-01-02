@@ -1,0 +1,33 @@
+.header {
+  outline: 2px solid tomato;
+}
+
+.logo_type {
+  color: $main-title-color;
+  font-family: 'Raleway', sans-serif;
+  @include font(400, 24px, 1.16);
+
+  & .logo__accent {
+    color: $accent-color;
+  }
+}
+
+.menu {
+  @include flex;
+  padding: 0;
+  border: 0;
+  background-color: inherit;
+}
+
+.is-open {
+  .menu__logo-menu {
+    opacity: 0;
+  }
+  .menu__logo-close {
+    opacity: 1;
+  }
+}
+
+.menu__logo-close {
+  opacity: 0;
+}

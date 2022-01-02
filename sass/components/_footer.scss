@@ -1,0 +1,147 @@
+.footer_position {
+    background-color: $unic-bgc-color;
+    padding: 60px 0;
+}
+
+.footer__container {
+    @media screen and (min-width: 768px){
+        @include flex($al: baseline, $jy: space-between);
+    flex-wrap: wrap;
+    }
+}
+
+.logo_light {
+    margin-bottom: 20px;
+  
+    color: #ffffff;
+}
+
+.footer__address {
+    @media screen and (max-width: 767.98px){
+        margin-bottom: 60px;
+    }
+
+    @media screen and (max-width: 1199.98px){
+        text-align: center;
+    }
+}
+
+.address__list {
+    font-style: normal;
+    @include font(400, 14px, 1.71);
+}
+
+.address__item {  
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+}
+
+.address__link {
+    color: rgba(255, 255, 255, 0.6);
+  
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+}
+
+.address__link_light {
+    color: #ffffff;
+}
+
+.footer__social {
+    @media screen and (max-width: 767.98px){
+        margin-bottom: 60px;
+    }
+    @media screen and (min-width: 768px){
+        margin-left: 165px;
+    }
+    @media screen and (min-width: 1200px){
+        margin-left: 70px;
+    }
+}
+
+.footer__title {
+    margin-bottom: 20px;
+  
+    color: $second-title-color;
+  
+    text-transform: uppercase;
+    @include font(700, 14px, 1.14);
+
+    @media screen and (max-width: 1199.98px){
+        text-align: center;
+    }
+}
+
+.social__link_grey {
+    color: $second-btn-color;
+    background-color: rgba(255, 255, 255, 0.1);
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+    }
+}
+
+.footer__subscribe {
+    @media screen and (min-width:768px) and (max-width: 1199.98px){
+        margin-top: 60px;
+    }
+    @media screen and (min-width: 1200px){
+        margin-left: 93px;
+    }
+}
+
+.subscribe_position {
+    @include flex;
+    @media screen and (max-width: 1199.98px){
+        flex-direction: column; 
+    }
+}
+
+.subscribe__mail {
+    padding: 15px 16px;
+    width: 100%;
+    height: 50px;
+    outline: none;
+  
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background-color: inherit;
+    color: $second-title-color;
+    @include transition(border-color);
+  
+    &:focus {
+      border-color: $accent-color;
+    }
+
+    @media screen and (min-width: 768px){
+        width: 450px;
+    }
+    @media screen and (min-width: 1200px){
+        width: 358px;
+    }
+    @media screen and (max-width: 1199.98px){
+        margin-bottom: 20px;
+    }
+}
+
+.subscribe__button {
+    @extend %button;
+    @include flex;
+    @include font(700, 16px, 1.87, 0.06em);
+  
+    padding: 10px 28px;
+    text-align: center;
+
+    @media screen and (min-width: 1200px){
+        margin-left: 12px;
+    }
+}
+
+.subscribe__icon {
+    margin-left: 10px;
+    fill: currentColor;
+}
+
