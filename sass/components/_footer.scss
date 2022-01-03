@@ -5,8 +5,11 @@
 
 .footer__container {
     @media screen and (min-width: 768px){
-        @include flex($al: baseline, $jy: space-between);
+        @include flex($al: baseline);
     flex-wrap: wrap;
+    }
+    @media screen and (min-width: 1200px){
+        justify-content: space-between;
     }
 }
 
