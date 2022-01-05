@@ -1,0 +1,15 @@
+@keyframes after-move {
+    0% {
+      content: '';
+      width: 0%;
+      height: 4px;
+      background-color: $accent-color;
+    }
+    100% {
+      content: '';
+      width: 100%;
+      height: 4px;
+      background-color: $accent-color;
+    }
+  }
+  

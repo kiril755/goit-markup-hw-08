@@ -1,0 +1,192 @@
+.backdrop_position {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+  
+    background-color: rgba(0, 0, 0, 0.2);
+    &.is-hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+}
+
+.modal_type {
+    min-width: 450px;
+    min-height: 609px;
+    background-color: $main-bgc-color;
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 1000ms;
+  
+    border-radius: 4px;
+  
+    .backdrop.is-hidden & {
+      transform: scale(2) rotate(180deg) translate(50%, 50%);
+      transition: transform 1000ms;
+    }
+
+    @media screen and (min-width: 1200px){
+        min-width: 528px;
+        min-height: 581px;
+    }
+}
+
+.modal__button {
+    @include flex;
+  
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+  
+    background-color: inherit;
+    cursor: pointer;
+  
+    @include transition(background-color);
+  
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+    }
+}
+
+.modal__form {
+    padding: 40px;
+}
+
+.modal__title {
+    margin-bottom: 12px;
+  
+    @include font(700, 20px, 1.5);
+  
+    text-align: center;
+    color: $main-title-color;
+
+    @media screen and (min-width: 1200px){
+        @include font(700, 20px, 1.15);
+    }
+}
+
+.form__label {
+    display: block;
+    margin-bottom: 4px;
+  
+    @include font(400, 12px, 1.16, 0.01em);
+    color: $main-text-color;
+}
+
+.form__input-wrap {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.form__input {
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 11px 42px;
+    outline: none;
+  
+    @include transition(border-color);
+  
+    &:focus {
+      border-color: $accent-color;
+    }
+}
+
+.form__icon {
+    display: block;
+    position: absolute;
+  
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+  
+    fill: $main-title-color;
+    @include transition(fill);
+  
+    .form__input:focus + & {
+      fill: $accent-color;
+    }
+}
+
+.comment_position {
+    margin-bottom: 20px;
+}
+
+.comment_textarea {
+    padding: 12px 16px;
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+  
+    resize: none;
+    &:focus {
+      border-color: $accent-color;
+    }
+    &::placeholder {
+      @include font(400, 14px, 1.14, 0.01em);
+      color: rgba(117, 117, 117, 0.5);
+    }
+}
+
+.terms_position {
+    @include flex;
+    
+    margin-bottom: 30px;
+  
+    @include font(400, 12px, 1.17);
+    color: $main-text-color;
+
+    @media screen and (min-width: 1200px){
+        @include font(400, 14px, 1.71);
+    }
+}
+
+.terms__checkbox {
+    display: block;
+    appearance: none;
+}
+
+.terms__icon {
+    @include flex;
+    margin-right: 8px;
+  
+    border: 2px solid #212121;
+    border-radius: 2px;
+    width: 16px;
+    height: 15px;
+  
+    .terms__checkbox:checked + & {
+      background-color: $accent-color;
+      border: none;
+    }
+}
+
+.terms__link {
+    color: $accent-color;
+}
+
+.form__button {
+    @extend %button;
+    padding: 10px 55px;
+    margin: 0 auto;
+    display: block;
+  
+    @include font(700, 16px, 1.87, 0.06em);
+    text-align: center;
+  
+    color: $second-btn-color;
+    background-color: #188ce8;
+  }
