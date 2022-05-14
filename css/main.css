@@ -10,10 +10,16 @@ img {
 }
 
 .container {
-  width: 480px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -486,7 +492,6 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 450px;
   height: 120px;
   border-radius: 4px;
   background-color: #f5f4fa;
@@ -663,7 +668,6 @@ ul {
 
 .team__img {
   width: 450px;
-  height: 460px;
   margin-bottom: 30px;
 }
 
@@ -807,7 +811,6 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 210px;
   height: 92px;
   color: #afb1b8;
   border: 1px solid currentColor;
@@ -1310,7 +1313,7 @@ ul {
 }
 
 .menu {
-  background-color: inherit;
+  background-color: #ffffff;
 }
 
 .menu_position {
@@ -1345,7 +1348,7 @@ ul {
 
 .menu__close {
   border: none;
-  background-color: inherit;
+  background-color: #ffffff;
   position: absolute;
   right: 15px;
   top: 10px;

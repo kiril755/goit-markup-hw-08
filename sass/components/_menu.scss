@@ -1,5 +1,5 @@
 .menu {
-    background-color: inherit;
+    background-color: $main-bgc-color;
 }
 
 .menu_position {
@@ -24,7 +24,7 @@
 
 .menu__close {
     border: none;
-    background-color: inherit;
+    background-color: $main-bgc-color;
     position: absolute;
     right: 15px;
     top: 10px;
