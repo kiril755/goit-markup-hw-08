@@ -1062,8 +1062,6 @@ ul {
 }
 
 .modal_type {
-  min-width: 450px;
-  min-height: 609px;
   background-color: #ffffff;
   position: absolute;
   top: 50%;
@@ -1078,8 +1076,8 @@ ul {
 }
 
 .backdrop.is-hidden .modal_type {
-  -webkit-transform: scale(2) rotate(180deg) translate(50%, 50%);
-          transform: scale(2) rotate(180deg) translate(50%, 50%);
+  -webkit-transform: scale(2) rotate(90deg) translate(50%, 50%);
+          transform: scale(2) rotate(90deg) translate(50%, 50%);
   -webkit-transition: -webkit-transform 1000ms;
   transition: -webkit-transform 1000ms;
   transition: transform 1000ms;
@@ -1088,8 +1086,22 @@ ul {
 
 @media screen and (min-width: 1200px) {
   .modal_type {
-    min-width: 528px;
+    width: 528px;
     min-height: 581px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .modal_type {
+    max-width: 98vw;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .modal_type {
+    width: 450px;
+    min-height: 609px;
   }
 }
 
@@ -1296,6 +1308,7 @@ ul {
 }
 
 .terms__link {
+  display: inline;
   color: #2196f3;
 }
 

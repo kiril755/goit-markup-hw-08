@@ -12,8 +12,6 @@
 }
 
 .modal_type {
-    min-width: 450px;
-    min-height: 609px;
     background-color: $main-bgc-color;
   
     position: absolute;
@@ -25,13 +23,23 @@
     border-radius: 4px;
   
     .backdrop.is-hidden & {
-      transform: scale(2) rotate(180deg) translate(50%, 50%);
+      transform: scale(2) rotate(90deg) translate(50%, 50%);
       transition: transform 1000ms;
     }
 
-    @media screen and (min-width: 1200px){
-        min-width: 528px;
+    @media screen and (min-width: 1200px) {
+        width: 528px;
         min-height: 581px;
+    }
+    
+    @media screen and (max-width: 479px) {
+        max-width: 98vw;
+        height: auto;
+    }
+    
+    @media screen and (max-width: 1199px) {
+        width: 450px;
+        min-height: 609px;
     }
 }
 
@@ -175,6 +183,7 @@
 }
 
 .terms__link {
+    display: inline;
     color: $accent-color;
 }
 
